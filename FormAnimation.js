@@ -89,9 +89,16 @@ $(document).ready(function(){
   $('.textarea-q').keypress(function(event) {
     if (event.which == 13) {
       event.preventDefault();
-        var s = $(this).val();
-        $(this).val(s+"\n");
+        event.preventDefault();
+        var cursorPos = $(this).prop('selectionStart');
+        var v = $(this).val();
+        var textBefore = v.substring(0,  cursorPos );
+        var textAfter  = v.substring( cursorPos, v.length );
+        $(this).val( textBefore+ "\n" +textAfter );
+        $(this).prop('selectionEnd', cursorPos + 1);
         this.scrollTop = this.scrollHeight;
+        $(this).blur();
+        $(this).focus();
     }
   });
   
