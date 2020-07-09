@@ -97,7 +97,7 @@
     }
 
     function resize() {
-        width = window.innerWidth;
+        width = document.body.scrollWidth;
         height = window.innerHeight;
         largeHeader.style.height = height+'px';
         canvas.width = width;
