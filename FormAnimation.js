@@ -107,6 +107,8 @@ $(document).ready(function(){
       scrollToElement(this);
     }
   })
+    
+  $('form.submit-form').dirtyForms();
   
   $('#q1').focus();
 
