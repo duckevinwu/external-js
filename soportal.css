@@ -1,6 +1,8 @@
 .launch-form {
   height: 100%;
   padding-top: 30px;
+  border-width: 0;
+  box-sizing: border-box;
 }
 
 /* The Modal (background) */
@@ -20,6 +22,7 @@
   background-color: rgba(255,255,255,1);
   color: white;
   transition: opacity 0.7s, bottom 0.7s, height 0.7s;  /* animate these properties */
+  box-sizing: border-box;
 }
 
 .modal-closed {    /* close state is hidden and off screen */
